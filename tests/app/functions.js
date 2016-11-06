@@ -44,7 +44,7 @@ describe('functions', function() {
     var square = function (x) { return x * x; };
 
     var funcs = functionsAnswers.makeClosures(arr, square);
-    expect(funcs).to.have.length(arr.length);
+    expect(funcs.length).to.equal(arr.length);
 
     for (var i = 0; i < arr.length; i++) {
       expect(funcs[i]()).to.eql(square(arr[i]));
